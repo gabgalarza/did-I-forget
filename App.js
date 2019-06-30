@@ -39,12 +39,13 @@ async function loadResourcesAsync() {
       ...Ionicons.font,
       // We include SpaceMono because we use it in HomeScreen.js. Feel free to
       // remove this if you are not using it in your app
-      'space-mono': require('./assets/fonts/SpaceMono-Regular.ttf'),
+      'mosk-ultra-bold': require('./assets/fonts/Mosk/MoskUltra-Bold900.ttf'),
+      'mosk-light-300': require('./assets/fonts/Mosk/MoskLight300.ttf'),
     }),
   ]);
 }
 
-function handleLoadingError(error: Error) {
+function handleLoadingError(error = new Error) {
   // In this case, you might want to report the error to your error reporting
   // service, for example Sentry
   console.warn(error);

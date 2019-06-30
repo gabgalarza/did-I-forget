@@ -10,18 +10,19 @@ import {
   View,
 } from 'react-native';
 
-import { MonoText } from '../components/StyledText';
-
 export default function HomeScreen() {
+  const {container, contentContainer, titleContainer, titleFirst, titleSecondary} = styles;
+  
   return (
-    <View style={styles.container}>
+    <View style={container}>
       <ScrollView
-        style={styles.container}
-        contentContainerStyle={styles.contentContainer}>
+        style={container}
+        contentContainerStyle={contentContainer}>
 
-        <View style={styles.titleContainer}>
-          <Text style={styles.titleFirst}>Did I</Text>
-          <Text style={styles.titleSecondary}>Forget...?</Text>
+        <View style={titleContainer}>
+          <Text style={titleFirst}>Did I</Text>
+          <Text style={titleSecondary}>Forget</Text>
+          <Text style={titleSecondary}>?</Text>
         </View>
 
       </ScrollView>
@@ -44,14 +45,14 @@ const styles = StyleSheet.create({
   titleContainer: {
     alignItems: 'center',
     marginHorizontal: 30,
-    marginVertical: 250
+    marginVertical: 250,
   },
   titleFirst: {
     fontSize: 60,
-    //fontFamily: primary
+    fontFamily: 'mosk-ultra-bold'
   },
   titleSecondary: {
     fontSize: 40,
-    //fontFamily: secondary
+    fontFamily: 'mosk-light-300'
   }
 });
